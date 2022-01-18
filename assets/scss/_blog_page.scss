@@ -1,5 +1,7 @@
+
 // Home Page Blog
 .home-blog-area{
+    background: #f8fcff;
     .home-blog-single{
         @include transition(.4s);
         .blog-img-cap{
@@ -9,16 +11,17 @@
                 img{
                     width: 100%;
                     @include transform(scale (1));
-                    transition: all 0.5s ease-out 0s;
+                    transition: all 0.3s ease-out 0s;
                 }
                 // Date
                 .blog-date{
-                    background:#ff1313;
+                    background:#09cc7f;
                     padding:15px 34px;
                     display: inline-block;
                     position: absolute;
                     bottom: 0;
                     left: 0;
+                    @include transition(.4s);
                     @media #{$md}{
                         padding: 8px 20px;
                     }
@@ -53,9 +56,11 @@
             }
             .blog-cap{
              
-                background: #f7fdff;
+                background: #fff;
                 padding: 37px 129px 37px 50px;
                 border: 1px solid rgb(247, 247, 247);
+                border-top: 0;
+                @include transition(.4s);
                 @media #{$lg}{
                     padding: 37px 23px 37px 45px;
                 }
@@ -68,26 +73,9 @@
                 @media #{$xs}{
                     padding: 19px 8px 17px 18px;
                 }
-                span{
-                    color:#0d1628;
-                    font-size: 16px;
-                    margin: 0;
-                    padding: 0;
-                    margin-bottom: 13px;
-                    margin-left: 72px;
-                    display: inline-block;
-                    position: relative;
-                    &::before{
-                        position: absolute;
-                        content: "";
-                        width: 40px;
-                        height: 2px;
-                        background: #0d1628;
-                        top: 0;
-                        left: -67px;
-                        top: 50%;
-                        transform: translateY(-50%);
-                    }
+               
+                p{
+                    color: #707b8e;
                 }
                 h3{
                     a{
@@ -95,9 +83,9 @@
                         font-size: 24px;
                         font-weight: 700;
                         line-height: 1.4;
-                        margin-bottom: 20px;
-                        font-family: $font_2;
+                        margin-bottom: 19px;
                         display: block;
+                        text-transform: capitalize;
                         &:hover{
                             color: $theme-color;
                         }
@@ -113,18 +101,36 @@
                        
                     }
                 }
+                .more-btn{
+                    color: #3a3a3a;
+                    text-transform: uppercase;
+                    font-size: 14px;
+                    font-family: $font_1;
+                    color: #3a3a3a;
+                    &:hover{
+                        color: #014b85;
+                    }
+                }
             }
         }
     }
 }
-
 .home-blog-single:hover{
-    .blog-img img{
-        @include transform(scale(1.05));
+    
+    .blog-img-cap{
+        .blog-img {
+            .blog-date{
+                background:$theme-color;
+            }
+            img{
+                @include transform(scale(1.04));
+            }
+        }
+        .blog-cap{ 
+            border-top: 0;
+        }
     }
 }
-
-
 
 
 /* Start Blog Area css

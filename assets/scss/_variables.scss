@@ -1,7 +1,7 @@
 // Font Family
-    $font_1 :'Teko', sans-serif;   //Heading Font
-    $font_2 :'Barlow', sans-serif;     //Body Font 
-    // $font_3 :'Muli', sans-serif;   //special fonts
+    $font_1 :'Muli', sans-serif;   //Heading Font
+    $font_2 :'Muli', sans-serif;     //Body Font 
+    // $font_3 :'Open Sans', sans-serif;   //special fonts
 
 /*--------------- ---- Responsive --------------------------*/
 
@@ -35,17 +35,17 @@
     $large_mobile:'only screen and (min-width: 480px) and (max-width: 767px)';
 
 // Custom
-    $large1:'only screen and (min-width: 1200px) and (max-width: 1360px)';
-    $large2:'(min-width: 1200px) and (max-width: 1500px)';
+    $large1:'only screen and (min-width: 1200px) and (max-width: 1400px)';
+    $large2:'(min-width: 1401px) and (max-width: 1600px)';
     $large3:'only screen and (min-width: 1601px) and (max-width: 1800px)';
 
 
 
 @import 'color';
 
-// Elemet Page btn
-$heading_color2: #112e41;
-$white_color:#fff;
+// Element Page btn
+    $heading_color2: #112e41;
+    $white_color:#fff;
 
 .boxed-btn {
 	background: #fff;

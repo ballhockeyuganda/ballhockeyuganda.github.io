@@ -6,13 +6,14 @@
 	transition: all $time ease-out 0s;
 }
 
+// @include transition(.4s);
 @mixin transform($value) {
   -webkit-transform: $value;
       -ms-transform: $value;
           transform: $value;
 }
 
-// Flex Box
+// @include flexbox();
 @mixin flexbox() {
   display: -webkit-box;
   display: -moz-box;
@@ -21,12 +22,13 @@
   display: flex;
 }
 
+// @include flex-wrap(wrap);
 @mixin flex-wrap($wrap) {
   -ms-flex-wrap: $wrap;
   flex-wrap: $wrap;
 }
 
-
+// @include justify-content(space-between);
 @mixin justify-content($justify) {
   -webkit-justify-content: $justify;
      -moz-justify-content: $justify;
@@ -42,7 +44,8 @@
           align-content: $align;
 }
 
-// Cross-axis Alignment
+// @include align-items(flex-end);
+// @include align-items(center);
 @mixin align-items($align) {
   -webkit-align-items: $align;
      -moz-align-items: $align;

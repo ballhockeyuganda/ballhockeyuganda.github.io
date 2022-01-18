@@ -1,6 +1,7 @@
 (function ($)
   { "use strict"
   
+
 /* 1. Proloder */
     $(window).on('load', function () {
       $('#preloader-active').delay(450).fadeOut('slow');
@@ -41,6 +42,9 @@
       });
     };
 
+
+
+    
 /* 4. MainSlider-1 */
     // h1-hero-active
     function mainSlider() {
@@ -54,8 +58,8 @@
         doAnimations($animatingElements);
       });
       BasicSlider.slick({
-        autoplay: true,
-        autoplaySpeed: 5000,
+        autoplay: false,
+        autoplaySpeed: 4000,
         dots: false,
         fade: true,
         arrows: false, 
@@ -106,52 +110,53 @@
     }
     mainSlider();
 
-/* 5. Testimonial Active*/
 
-/* 4. Testimonial Active*/
-    var testimonial = $('.h1-testimonial-active');
-    if(testimonial.length){
-    testimonial.slick({
-        dots: false,
-        infinite: true,
-        speed: 1000,
-        autoplay:true,
-        loop:true,
-        arrows: true,
-        prevArrow: '<button type="button" class="slick-prev"><i class="ti-arrow-top-left"></i></button>',
-        nextArrow: '<button type="button" class="slick-next"><i class="ti-arrow-top-right"></i></button>',
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        responsive: [
-          {
-            breakpoint: 1024,
-            settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1,
-              infinite: true,
-              dots: false,
-              arrow:false
-            }
-          },
-          {
-            breakpoint: 600,
-            settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1,
-              arrows:false
-            }
-          },
-          {
-            breakpoint: 480,
-            settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1,
-              arrows:false,
-            }
-          }
-        ]
-      });
-    }
+
+/* 5. Testimonial Active*/
+var testimonial = $('.h1-testimonial-active');
+if(testimonial.length){
+testimonial.slick({
+    dots: true,
+    infinite: true,
+    speed: 1000,
+    autoplay:false,
+    arrows: false,
+    prevArrow: '<button type="button" class="slick-prev"><i class="ti-angle-left"></i></button>',
+    nextArrow: '<button type="button" class="slick-next"><i class="ti-angle-right"></i></button>',
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: false,
+          arrow:true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: false,
+          arrow:true
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: false,
+          arrow:true
+        }
+      }
+    ]
+  });
+}
 
 /* 6. Nice Selectorp  */
   var nice_Select = $('select');
@@ -209,5 +214,15 @@
   $(".snake").snakeify({
     speed: 200
   });
+
+
+//17.  Progress barfiller
+
+  $('#bar1').barfiller();
+  $('#bar2').barfiller();
+  $('#bar3').barfiller();
+  $('#bar4').barfiller();
+  $('#bar5').barfiller();
+  $('#bar6').barfiller();
 
 })(jQuery);

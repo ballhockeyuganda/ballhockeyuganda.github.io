@@ -45,7 +45,6 @@
             text-transform: capitalize;
             border-radius: 0px;
             border-bottom: 2px solid #e9f0f4;
-            font-size: 16px;
             &::-moz-placeholder {
                 color: #112957;
                 font-size: 16px;
@@ -88,12 +87,6 @@
             }
             .option {
                 color: #a3a3a3;
-            }
-
-            .current {
-                color: #918f8f;
-                font-size: 16px;
-                font-weight: 300;
             }
         }
         textarea {
